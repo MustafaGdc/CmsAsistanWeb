@@ -53,7 +53,27 @@ app.post('/api/admin/upload',sameOrigin,auth,upload.single('image'),asyncRoute(a
  if(!r.ok)throw new Error(`Supabase Storage ${r.status}: ${(await r.text()).slice(0,250)}`);
  res.json({url:`${SUPABASE_URL}/storage/v1/object/public/${encodeURIComponent(BUCKET)}/${filename}`});
 }));
-app.use('/uploads',express.static(uploadDir,{index:false,maxAge:'1d'}));
+
+if (REMOTE) {
+  app.get('/uploads/:filename', (req, res) => {
+    const filename = req.params.filename;
+
+    if (!/^[a-zA-Z0-9._-]+$/.test(filename)) {
+      return res.status(400).send('Geçersiz dosya adı');
+    }
+
+    return res.redirect(
+      302,
+      `${SUPABASE_URL}/storage/v1/object/public/${encodeURIComponent(BUCKET)}/${encodeURIComponent(filename)}`
+    );
+  });
+} else {
+  app.use('/uploads', express.static(uploadDir, {
+    index: false,
+    maxAge: '1d'
+  }));
+}
+
 const chats=new Map();app.post('/api/assistant',sameOrigin,asyncRoute(async(req,res)=>{const q=clean(req.body.message,500);if(!q)return res.status(400).json({error:'Soru boş.'});const key=req.ip,now=Date.now(),v=chats.get(key)||[];const recent=v.filter(t=>now-t<60000);if(recent.length>=12)return res.status(429).json({error:'Bir dakika sonra tekrar deneyin.'});recent.push(now);chats.set(key,recent);const p=(await read()).profile;const context=`Ad: ${p.name}\nEğitim: ${p.education_tr}\nHakkında: ${p.about_tr}\nYetenekler: ${p.skills_tr}\nİletişim: ${p.email||'Sitedeki iletişim formu'}`;const fallback=()=>{const l=q.toLocaleLowerCase('tr');if(/iletişim|mail|telefon|contact|reach/.test(l))return p.email?`İletişim e-postası: ${p.email}`:'İletişim sayfasındaki formu kullanabilirsin.';if(/eğitim|okul|üniversite|education|study/.test(l))return p.education_tr;if(/yetenek|skill|bilgi|program/.test(l))return p.skills_tr;if(/proje|project/.test(l))return 'Projeler sayfasında çalışmalarını inceleyebilirsin.';return `${p.name}: ${p.about_tr} Daha fazlası için Hakkımda ve Projeler sayfalarına göz atabilirsin.`};if(!process.env.GEMINI_API_KEY)return res.json({reply:fallback(),mode:'basic'});try{const model=process.env.GEMINI_MODEL||'gemini-2.5-flash';const ctrl=new AbortController();const timer=setTimeout(()=>ctrl.abort(),12000);let r;try{r=await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model)}:generateContent`,{method:'POST',headers:{'Content-Type':'application/json','x-goog-api-key':process.env.GEMINI_API_KEY},body:JSON.stringify({systemInstruction:{parts:[{text:`Sen Mustafa'nın kişisel portfolyo asistanısın. Yalnızca verilen bilgilerle cevapla; bilmediğini uydurma. Kısa, samimi ve kullanıcının dilinde yanıt ver.\n${context}`}]},contents:[{role:'user',parts:[{text:q}]}],generationConfig:{maxOutputTokens:250}}),signal:ctrl.signal})}finally{clearTimeout(timer)}if(!r.ok)throw Error('AI servis hatası');const j=await r.json();res.json({reply:clean(j.candidates?.[0]?.content?.parts?.map(x=>x.text||'').join(' ')||fallback(),2000),mode:'ai'})}catch(e){res.json({reply:fallback(),mode:'basic'})}}));
 app.use(express.static(path.join(ROOT,'public'),{extensions:['html']}));app.get('/',(req,res)=>res.sendFile(path.join(ROOT,'public','index.html')));
 app.use((err,req,res,next)=>{console.error('Sunucu hatası:',err.message);res.status(err.code==='LIMIT_FILE_SIZE'?413:err.code?400:500).json({error:err.code==='LIMIT_FILE_SIZE'?'Görsel en fazla 4 MB olabilir.':err.code?'İstek işlenemedi.':'Sunucu hatası. Sunucu günlüklerini kontrol edin.'})});
