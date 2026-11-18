@@ -1,0 +1,117 @@
+{
+  "profile": {
+    "name": "Mustafa Güdücü",
+    "title_tr": "Bilgisayar Programcılığı Öğrencisi",
+    "title_en": "Computer Programming Student",
+    "intro_tr": "Merhaba! Ben Mustafa Güdücü. Akdeniz Üniversitesi Bilgisayar Programcılığı öğrencisiyim. Teknolojiye ve yazılım geliştirmeye ilgi duyuyorum. Yeni projeler üretmeyi, farklı teknolojiler öğrenmeyi ve kendimi geliştirmeyi seviyorum.",
+    "intro_en": "Hello! I'm Mustafa Güdücü, a Computer Programming student at Akdeniz University. I'm passionate about technology and software development. I enjoy creating new projects, exploring different technologies, and continuously improving my skills.",
+    "about_tr": "Karaman Ermenek doğumluyum. Akdeniz Üniversitesi Bilgisayar Programcılığı öğrencisiyim. Oyun oynamayı, futbolu, spor yapmayı ve okçuluğu seviyorum.",
+    "about_en": "I was born in Ermenek, Karaman. I study Computer Programming at Akdeniz University. I enjoy gaming, football, sports, and archery.",
+    "education_tr": "Akdeniz Üniversitesi — Bilgisayar Programcılığı",
+    "education_en": "Akdeniz University — Computer Programming",
+    "skills_tr": "HTML, CSS, JavaScript, Python, Grafik Tasarım, Okçuluk",
+    "skills_en": "HTML, CSS, JavaScript, Python, Graphic Design, Archery",
+    "photo": "/uploads/f43f13e5-d35e-408f-8221-966660b9c32c.jpg",
+    "address": "Konyaaltı / Antalya / Türkiye",
+    "phone": "+90 546 474 1230",
+    "email": "mustafaguducu06@gmail.com",
+    "map_url": "https://www.google.com/maps?q=Akdeniz+Universitesi+Antalya&output=embed"
+  },
+  "projects": [
+    {
+      "id": "p1",
+      "title_tr": "Karakalem Renklendirmesi",
+      "title_en": "Coloring Pencil Sketches",
+      "description_tr": "Siyah beyaz bir karakalem çizimi Photoshop kullanarak renklendirdim.",
+      "description_en": "I colorized a black-and-white pencil drawing using Photoshop.",
+      "category": "Photoshop",
+      "image": "/uploads/8843ffee-8fa6-4dce-9667-f0c5dbb205e0.png"
+    },
+    {
+      "id": "p2",
+      "title_tr": "History Brush",
+      "title_en": "History Brush",
+      "description_tr": "Renkli bir görüntüyü siyah beyaza dönüştürüyor, ardından seçtiğimiz belirli alanların üzerini boyayarak bir \"geçmiş fırçası\" (history brush) efekti uyguluyor ve böylece orijinal renkleri geri getiriyoruz.",
+      "description_en": "We convert a color image into black and white, and then, by painting over the specific areas we choose, we apply a \"history brush\" effect—bringing back the original colors.",
+      "category": "Design",
+      "image": "/uploads/7751edc6-a333-4485-bc44-94a51b6d720d.jpg"
+    },
+    {
+      "id": "p3",
+      "title_tr": "Image Stack",
+      "title_en": "Image Stack",
+      "description_tr": "Görüntü İstifleme (Image Stack), birden fazla görseli katmanlar kullanarak tek bir kompozisyonda birleştiren dijital bir düzenleme tekniğidir. Adobe Photoshop'ta yaratıcı tasarımlar ve görsel efektler oluşturmak için sıklıkla kullanılır. Her bir katman; renkler, opaklık ve konumlandırma ayarları değiştirilerek ayrı ayrı düzenlenebilir. Bu teknik, tasarımcıların profesyonel ve görsel açıdan etkileyici görüntüler ortaya çıkarmasına olanak tanır.",
+      "description_en": "Image Stack is a digital editing technique that combines multiple images into a single composition using layers. It is commonly used in Adobe Photoshop to create creative designs and visual effects. Each layer can be edited separately by adjusting colors, opacity, and positioning. This technique allows designers to create professional and visually appealing images.",
+      "category": "Multimedia",
+      "image": "/uploads/1e5214c2-d9af-4b9f-b715-6ab7bcf72ac9.png"
+    }
+  ],
+  "gallery": [
+    {
+      "id": "g1",
+      "title_tr": "Kampüs Günleri",
+      "title_en": "Campus Days",
+      "description_tr": "Üniversite hayatımdan bir kare.",
+      "description_en": "A moment from university life.",
+      "image": "/uploads/c70e57c3-3527-4081-b2cf-9aece181df8e.jpg"
+    },
+    {
+      "id": "g2",
+      "title_tr": "Tarihi ve Kültürel Gezi",
+      "title_en": "Historical and Cultural Tour",
+      "description_tr": "Eğlenerek Geçirilen Zamanlar",
+      "description_en": "Times Spent Having Fun",
+      "image": "/uploads/572ffb00-7383-4024-ab7d-c47c15072225.jpg"
+    },
+    {
+      "id": "g3",
+      "title_tr": "Doğa ve Keşif",
+      "title_en": "Nature and Discovery",
+      "description_tr": "Yeni yerler keşfetmek.",
+      "description_en": "Exploring new places.",
+      "image": "/uploads/53c7acb3-dfce-41fa-9654-89dfdd6db961.jpg"
+    }
+  ],
+  "posts": [
+    {
+      "id": "b1",
+      "title_tr": "Web Tasarımında HTML, CSS ve JavaScript'in Önemi",
+      "title_en": "The Importance of HTML, CSS and JavaScript in Web Design",
+      "excerpt_tr": "Modern web sitelerinin temelini oluşturan HTML, CSS ve JavaScript teknolojilerinin görevleri ve birlikte nasıl çalıştıkları.",
+      "excerpt_en": "An overview of HTML, CSS and JavaScript, the core technologies of modern websites, and how they work together.",
+      "body_tr": "Web tasarımı, günümüzde teknolojinin en önemli alanlarından biridir. İnternette ziyaret ettiğimiz web sitelerinin temelinde HTML, CSS ve JavaScript teknolojileri bulunur.\n\nHTML, web sayfasının yapısını oluşturur. Başlıklar, paragraflar, görseller, bağlantılar ve formlar HTML kullanılarak hazırlanır.\n\nCSS, web sitesinin görsel tasarımını düzenler. Renkler, yazı tipleri, boşluklar, animasyonlar ve mobil uyumlu yerleşimler CSS ile oluşturulur.\n\nJavaScript ise web sitesine etkileşim kazandırır. Açılır menüler, dil değiştirme sistemleri, dinamik içerikler ve kullanıcı işlemleri JavaScript sayesinde gerçekleştirilebilir.\n\nBu üç teknolojinin birlikte kullanılması, modern ve kullanıcı dostu web sitelerinin geliştirilmesini sağlar. Kişisel portfolyo projemde de bu teknolojilerden yararlanarak mobil uyumlu ve etkileşimli bir web sitesi geliştirdim.",
+      "body_en": "Web design is one of the most important areas of modern technology. HTML, CSS and JavaScript form the foundation of many websites.\n\nHTML defines the structure of a web page, including headings, paragraphs, images, links and forms.\n\nCSS controls the visual appearance of a website, including colors, typography, spacing, animations and responsive layouts.\n\nJavaScript adds interactivity through features such as navigation menus, language switching, dynamic content and user interactions.\n\nTogether, these technologies make it possible to build modern, responsive and user-friendly websites. I also used them in my personal portfolio project.",
+      "category_tr": "Web Geliştirme",
+      "category_en": "Web Development",
+      "tags": "HTML, CSS, JavaScript, Web Tasarım, Responsive, Frontend",
+      "image": "/uploads/37bb4914-08d1-4860-ba3d-0842f598610e.jpg"
+    },
+    {
+      "id": "b2",
+      "title_tr": "Adobe Photoshop ile Grafik Tasarım ve Katman Kullanımı",
+      "title_en": "Graphic Design and Working with Layers in Adobe Photoshop",
+      "excerpt_tr": "Photoshop programında katman kullanımının önemi, görsel düzenleme teknikleri ve yaratıcı tasarım süreçleri.",
+      "excerpt_en": "The importance of layers, image editing techniques and creative design workflows in Adobe Photoshop.",
+      "body_tr": "Adobe Photoshop, grafik tasarım ve fotoğraf düzenleme alanında kullanılan güçlü yazılımlardan biridir. Afiş, sosyal medya görseli, web arayüzü ve çeşitli dijital tasarımlar hazırlamak için kullanılabilir.\n\nPhotoshop'un en önemli özelliklerinden biri katman sistemidir. Katmanlar sayesinde bir tasarımın farklı parçaları birbirinden bağımsız şekilde düzenlenebilir.\n\nÖrneğin bir afiş tasarımında arka plan, fotoğraflar, metinler ve dekoratif öğeler ayrı katmanlarda tutulabilir. Böylece tasarımın herhangi bir bölümünde değişiklik yapmak kolaylaşır.\n\nKatman maskeleri, görsellerin belirli alanlarını kalıcı olarak silmeden gizlemeye yardımcı olur. Akıllı nesneler ise görsellerin daha esnek biçimde dönüştürülmesini sağlar.\n\nBaşarılı bir grafik tasarımda renk uyumu, tipografi, hizalama ve görsel hiyerarşi önemlidir. Bu ilkelerin doğru kullanılması, tasarımın daha anlaşılır ve profesyonel görünmesini sağlar.",
+      "body_en": "Adobe Photoshop is a powerful application used for graphic design and photo editing. It can be used to create posters, social media graphics, website interfaces and other digital designs.\n\nOne of its most useful features is the layer system. Layers allow designers to edit different elements independently.\n\nFor example, a poster can contain separate layers for the background, photographs, text and decorative elements. This makes future changes easier.\n\nLayer masks help hide parts of an image without permanently deleting them, while smart objects allow more flexible transformations.\n\nColor harmony, typography, alignment and visual hierarchy are essential principles of effective graphic design. Applying these principles helps create clear and professional results.",
+      "category_tr": "Grafik Tasarım",
+      "category_en": "Graphic Design",
+      "tags": "Photoshop, Adobe, Grafik Tasarım, Image Stack, Katmanlar, Dijital Tasarım",
+      "image": "/uploads/2c9805f4-76c5-4143-986f-6cf429db177d.jpg"
+    },
+    {
+      "id": "b3",
+      "title_tr": "Yapay Zekânın Yazılım Geliştirme Sürecindeki Rolü",
+      "title_en": "The Role of Artificial Intelligence in Software Development",
+      "excerpt_tr": "Yapay zekâ araçlarının yazılım geliştirme, kod yazma, hata ayıklama ve öğrenme süreçlerindeki kullanım alanları.",
+      "excerpt_en": "How artificial intelligence tools support programming, debugging, software development and learning.",
+      "body_tr": "Yapay zekâ, yazılım geliştirme süreçlerini etkileyen önemli teknolojilerden biridir. Günümüzde yapay zekâ destekli araçlar, yazılımcılara birçok farklı konuda yardımcı olabilmektedir.\n\nBu araçlar kod önerileri oluşturabilir, hataların nedenlerini açıklayabilir ve farklı programlama dillerinin öğrenilmesini kolaylaştırabilir.\n\nÖrneğin bir web sitesi geliştirirken yapay zekâdan HTML, CSS ve JavaScript kodları için öneriler alınabilir. Ayrıca responsive tasarım, kullanıcı arayüzü ve performans iyileştirmeleri konusunda fikir üretmek mümkündür.\n\nAncak yapay zekânın oluşturduğu kodların her zaman doğru ve güvenli olduğu varsayılmamalıdır. Kodların test edilmesi, güvenlik açısından incelenmesi ve geliştirici tarafından anlaşılması gerekir.\n\nYapay zekâyı yazılım geliştirme sürecinde yardımcı bir araç olarak kullanmak, hem öğrenmeyi destekleyebilir hem de proje geliştirme sürecini daha verimli hâle getirebilir.",
+      "body_en": "Artificial intelligence is an important technology influencing modern software development. AI-powered tools can assist programmers with a wide range of tasks.\n\nThese tools can generate code suggestions, explain programming errors and support the learning of different programming languages.\n\nFor example, developers can use AI tools to explore HTML, CSS and JavaScript solutions when building websites. AI can also help generate ideas for responsive design, user interfaces and performance improvements.\n\nHowever, AI-generated code should not automatically be considered correct or secure. Developers need to test, review and understand the code before using it.\n\nWhen used as a supporting tool, artificial intelligence can improve learning and make software development workflows more efficient.",
+      "category_tr": "Yapay Zekâ",
+      "category_en": "Artificial Intelligence",
+      "tags": "Yapay Zekâ, AI, Yazılım, Programlama, Gemini, Teknoloji",
+      "image": "/uploads/b7fe00cf-c80e-4163-9266-1528109a05f2.jpg"
+    }
+  ],
+  "messages": []
+}
